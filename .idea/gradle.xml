@@ -12,6 +12,18 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/commons" />
+            <option value="$PROJECT_DIR$/commons/network" />
+            <option value="$PROJECT_DIR$/features" />
+            <option value="$PROJECT_DIR$/features/forgot" />
+            <option value="$PROJECT_DIR$/features/landing" />
+            <option value="$PROJECT_DIR$/features/login" />
+            <option value="$PROJECT_DIR$/features/main" />
+            <option value="$PROJECT_DIR$/features/profile" />
+            <option value="$PROJECT_DIR$/localization" />
+            <option value="$PROJECT_DIR$/router" />
+            <option value="$PROJECT_DIR$/screens" />
+            <option value="$PROJECT_DIR$/theme" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

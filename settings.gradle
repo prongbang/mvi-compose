@@ -3,8 +3,18 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
+         // Warning: this repository is going to shut down soon
     }
 }
 rootProject.name = "mvi-compose"
 include ':app'
+include ':commons:network'
+include ':features:landing'
+include ':theme'
+include ':features:profile'
+include ':features:login'
+include ':screens'
+include ':localization'
+include ':features:forgot'
+include ':features:main'
+include ':router'

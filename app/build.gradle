@@ -73,6 +73,9 @@ dependencies {
     implementation "com.google.accompanist:accompanist-placeholder-material:$accompanist_version"
     implementation "com.google.accompanist:accompanist-permissions:$accompanist_version"
 
+    implementation(project(":theme"))
+    implementation(project(":router"))
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test:rules:1.4.0'
     androidTestImplementation 'androidx.test:runner:1.4.0'

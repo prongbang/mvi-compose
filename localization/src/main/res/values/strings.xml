@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="main">MAIN</string>
+    <string name="landing">LANDING</string>
+    <string name="profile">PROFILE</string>
+    <string name="forgot">FORGOT</string>
+    <string name="login">LOGIN</string>
+</resources>
