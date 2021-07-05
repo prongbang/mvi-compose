@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">mvi-compose</string>
     <string name="profile">PROFILE</string>
-    <string name="home">HOME</string>
+    <string name="landing">LANDING</string>
+    <string name="forgot">FORGOT</string>
+    <string name="login">LOGIN</string>
+    <string name="main">MAIN</string>
 </resources>

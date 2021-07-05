@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.prongbang.mvicompose.screen.Screen
 import com.prongbang.mvicompose.ui.theme.MviComposeTheme
 
 @Composable
@@ -22,14 +23,14 @@ fun LoginScreen(navController: NavController) {
         ) {
             Button(
                 onClick = {
-                    navController.navigate("home")
+                    navController.navigate(Screen.Main.route)
                 }
             ) {
                 Text("HOME")
             }
             Button(
                 onClick = {
-                    navController.navigate("forgot")
+                    navController.navigate(Screen.Forgot.route)
                 }
             ) {
                 Text("FORGOT")

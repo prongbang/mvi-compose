@@ -1,4 +1,4 @@
-package com.prongbang.mvicompose.ui.home
+package com.prongbang.mvicompose.ui.main
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
@@ -15,13 +15,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.prongbang.mvicompose.ui.home.domain.Screen
+import com.prongbang.mvicompose.screen.Screen
 import com.prongbang.mvicompose.ui.landing.LandingScreen
 import com.prongbang.mvicompose.ui.profile.ProfileScreen
 import com.prongbang.mvicompose.ui.theme.MviComposeTheme
 
 @Composable
-fun HomeScreen() {
+fun MainScreen() {
     val navController = rememberNavController()
     MviComposeTheme {
         Scaffold(
@@ -29,7 +29,7 @@ fun HomeScreen() {
                 BottomNavigation {
                     val navBackStackEntry by navController.currentBackStackEntryAsState()
                     val currentDestination = navBackStackEntry?.destination
-                    Screen.items.forEach { screen ->
+                    Screen.BOTTOM_MENUS.forEach { screen: Screen ->
                         BottomNavigationItem(
                             icon = { Icon(Icons.Filled.Favorite, contentDescription = null) },
                             label = { Text(stringResource(screen.resourceId)) },
@@ -43,9 +43,9 @@ fun HomeScreen() {
                                         saveState = true
                                     }
                                     // Avoid multiple copies of the same destination when
-                                    // reselecting the same item
+                                    // re-selecting the same item
                                     launchSingleTop = true
-                                    // Restore state when reselecting a previously selected item
+                                    // Restore state when re-selecting a previously selected item
                                     restoreState = true
                                 }
                             }
@@ -56,11 +56,11 @@ fun HomeScreen() {
         ) { innerPadding ->
             NavHost(
                 navController,
-                startDestination = "landing",
+                startDestination = Screen.Landing.route,
                 Modifier.padding(innerPadding)
             ) {
-                composable("landing") { LandingScreen(navController) }
-                composable("profile") { ProfileScreen(navController) }
+                composable(Screen.Landing.route) { LandingScreen(navController) }
+                composable(Screen.Profile.route) { ProfileScreen(navController) }
             }
         }
     }
@@ -69,5 +69,5 @@ fun HomeScreen() {
 @Preview(showBackground = true)
 @Composable
 fun PreviewHomeScreen() {
-    HomeScreen()
+    MainScreen()
 }
