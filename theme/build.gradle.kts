@@ -25,8 +25,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -36,12 +36,12 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.0.0-beta09"
+        kotlinCompilerExtensionVersion = "1.0.0"
     }
 }
 
 dependencies {
-    implementation("androidx.compose.ui:ui:1.0.0-beta09")
-    implementation("androidx.compose.ui:ui-tooling:1.0.0-beta09")
-    implementation("androidx.compose.material:material:1.0.0-beta09")
+    implementation("androidx.compose.ui:ui:1.0.0")
+    implementation("androidx.compose.ui:ui-tooling:1.0.0")
+    implementation("androidx.compose.material:material:1.0.0")
 }

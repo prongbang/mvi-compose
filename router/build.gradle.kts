@@ -36,7 +36,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.0.0-beta09"
+        kotlinCompilerExtensionVersion = "1.0.0"
     }
 }
 
@@ -47,12 +47,13 @@ dependencies {
     implementation(project(":features:login"))
     implementation(project(":features:forgot"))
 
-    implementation("androidx.compose.material:material:1.0.0-beta09")
-    implementation("androidx.compose.ui:ui:1.0.0-beta09")
-    implementation("androidx.compose.ui:ui-tooling:1.0.0-beta09")
-    implementation("androidx.navigation:navigation-compose:2.4.0-alpha04")
+    implementation("androidx.compose.material:material:1.0.0")
+    implementation("androidx.compose.ui:ui:1.0.0")
+    implementation("androidx.compose.ui:ui-tooling:1.0.0")
+    implementation("androidx.navigation:navigation-compose:2.4.0-alpha05")
 
-    testImplementation("junit:junit:4.+")
+    testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.0.0")
 }

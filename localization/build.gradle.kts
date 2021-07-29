@@ -31,8 +31,13 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        compose = true
+    }
 }
 
 dependencies {
     implementation("androidx.core:core-ktx:1.6.0")
+
+    testImplementation("junit:junit:4.13.2")
 }
